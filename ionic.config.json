@@ -1,0 +1,7 @@
+{
+  "name": "noktaty",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>أخر مكاين ديال الضحك</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="all" dir="rtl" padding>
+  <ion-card>
+    <ion-card-content class="card_Content">
+      <!-- this is only if this gag is in my favorit gags -->
+      <ion-icon *ngIf="!isFav" class="favo" name="bookmark"></ion-icon>
+      <!-- this is only if this gag is in my favorit gags -->
+      
+        <p class="gagInfos">
+            <ion-badge item-end>#مجتمع</ion-badge>
+            <ion-badge item-end color="light"><ion-icon name="person"></ion-icon> ملك النكت</ion-badge>
+            <ion-badge item-end color="light"><ion-icon name="eye"></ion-icon> 56</ion-badge>
+        </p>
+      <p id="nokta-txt">
+        مرة وحدة مثقفة صحت جوزها بنص الليل بتقولو: هل ينام الحب ليلاً أم ينام الليل حباً، أم أنا والليل والحب ننام.. رد عليها جوزها:
+      </p>
+
+    </ion-card-content>
+  
+    <ion-row class="line_post line_post1">
+      <ion-col>
+        <button (click)="toggle()" ion-button icon-left full clear class="btns">
+          <ion-icon name="heart-outline" *ngIf="!visible"></ion-icon>
+          <ion-icon name="heart" *ngIf="visible"></ion-icon>
+          <div>12 نايس</div>
+        </button>
+      </ion-col>
+      <ion-col>
+          <button (click)="addtofavo()" ion-button icon-left full clear class="btns">
+            <ion-icon name="bookmark"></ion-icon>
+            <div>المفضلة</div>
+          </button>
+        </ion-col>
+    </ion-row>
+    <!-- <ion-row class="line_post2">
+      <ion-col>
+        <button ion-button icon-left full clear class="btns">
+          <ion-icon name="text"></ion-icon>
+          <div>4 كومونطيرات</div>
+        </button>
+      </ion-col>
+    </ion-row> -->
+  
+  </ion-card>
+
+  <ion-fab dir="rtl" left bottom>
+    <button ion-fab color="light"><ion-icon name="md-share"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-whatsapp"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="add"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

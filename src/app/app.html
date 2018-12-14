@@ -1,0 +1,60 @@
+<ion-menu dir="rtl" [content]="mycontent" side="right">
+    
+            <ion-header>
+                    <ion-toolbar color='primary'>
+                      <ion-title>
+                        <img src="assets/imgs/logo.png" width="128" />
+                      </ion-title>
+                    </ion-toolbar>
+                  </ion-header>
+    <ion-content dir="rtl">
+        <ion-list id="listSide">
+            <ion-row>
+                <ion-col>
+                    <button (click)="gotoHome()" class="sidebarbtntop" ion-item><ion-icon name="home"></ion-icon>
+                        الرئيسية
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button (click)="gotoFavo()" class="sidebarbtntop" ion-item><ion-icon name="bookmark"></ion-icon>
+                    مفضلتي
+                    </button>
+                </ion-col>
+            </ion-row>
+            <br>
+            <button ion-item>
+                <ion-icon name="pricetag"></ion-icon>
+                نكت الحشايشية
+                <ion-badge item-end>43</ion-badge>
+            </button>
+            <button ion-item>
+                <ion-icon name="pricetag"></ion-icon>
+                نكت سياسية
+                <ion-badge item-end>43</ion-badge>
+            </button>
+            <button ion-item>
+                <ion-icon name="pricetag"></ion-icon>
+                نكت السكرانين
+                <ion-badge item-end>43</ion-badge>
+            </button>
+            <button ion-item><ion-icon name="pricetag"></ion-icon>
+                نكت المتزوجين
+                <ion-badge item-end>43</ion-badge>
+            </button>
+            <button ion-item><ion-icon name="pricetag"></ion-icon>
+                نكت المدرسة
+                <ion-badge item-end>43</ion-badge>
+            </button>
+            <button ion-item><ion-icon name="pricetag"></ion-icon>
+                نكت البنات
+                <ion-badge item-end>43</ion-badge>
+            </button>
+            <button ion-item><ion-icon name="pricetag"></ion-icon>
+                لاشئ مما سبق
+                <ion-badge item-end>43</ion-badge>
+            </button>
+          </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
